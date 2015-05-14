@@ -1,0 +1,13 @@
+require 'memcached'
+
+class MemDAOService
+    def initialize()
+    end
+
+    def MemDAOService.build(serviceAddr)
+        Memcached.new(serviceAddr)
+    end
+    
+end
+
+        

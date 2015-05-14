@@ -1,0 +1,48 @@
+(setenv "HOME" "D:/emacs-24.1")
+(setenv "PATH" "D:/emacs-24.1")
+(setq default-directory "~/")
+(add-to-list 'load-path "~/.emacs.d")
+(set-default-font "Consolas-10")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(save-place t nil (saveplace)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-blue-mood)
+
+(add-to-list 'load-path "~/.emacs.d/slime/")  ; your SLIME directory
+(setq inferior-lisp-program "d:/sbcl/sbcl.exe") ; your Lisp system
+(require 'slime)
+(slime-setup)
+
+;;(add-to-list 'load-path "~/.emacs.d/emacs-starter-kit")
+;;(require 'emacs-starter-kit)
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Add in your own as you wish:
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings auto-complete)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict/")
+(ac-config-default)

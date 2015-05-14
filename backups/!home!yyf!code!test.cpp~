@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main(){
+  string ss= "this is a game.";
+  for(int i = 0 ; i < ss.length() ; i++){
+    std::cout << "hello" << std::endl;
+    
+  }
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+

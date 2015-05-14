@@ -1,0 +1,15 @@
+from Tkinter import *
+
+win = Tk()
+f = Frame(win)
+b1 = Button(f, "one")
+b2 = Button(f, "two")
+b3 = Button(f, "Three")
+b1.pack(side=LEFT)
+b2.pack(side=LEFT)
+b3.pack(side=LEFT)
+l = Label(win, "this label is over all buttons")
+l.pack()
+f.pack()
+
+mainloop()

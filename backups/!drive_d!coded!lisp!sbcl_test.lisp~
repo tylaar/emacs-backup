@@ -1,0 +1,171 @@
+(defun findListMore(target list1 list2)
+	(dolist (i list1)
+		(dolist (j list2)
+			(if (> (* i j) target) (format t "~d and ~d is larger than ~d.~%" 
+				i j target)))))
+
+(defun plot (fn min max step)
+	(loop for i from min to max by step do
+		(loop repeat (funcall fn i) do (format t "*"))
+		(format t "~%")))
+
+
+(defun valToAction(x)
+	(cond
+		((< x 10) (print "less than 10"))
+		((< x 20) (print "less than 20"))
+		(t (print "other situation."))))
+
+(defmacro when-cond(condition &rest body)
+	`(if ,condition (progn ,@body)))
+
+(defun primep(number)
+	(when (> number 1)
+		(loop for fac from 2 to (isqrt number) never (zerop (mod number fac)))))
+
+(defun next-prime(number)
+	(loop for n from number when (primep n) return n))
+
+(defmacro do-primes ((var start end) &body body)
+	`(do ((ending-value ,end)
+		(,var (next-prime ,start) (next-prime (1+ ,var))))
+		((> ,var ending-value))
+		,@body))
+
+(defmacro with-gensyms((&rest names) &body body)
+	`(let ,(loop for n in names collect `(,n (gensym)))
+		,@body))
+
+(defun mymacro(expr)
+	(apply #'(lambda (x) (list 'setf x nil))
+		(cdr expr)))
+
+
+(defun string-split (split-string string)
+	"Returns a list containing items in 'string' split from
+	occurrences of 'split-string'."
+	(loop with l = (length split-string)
+		for n = 0 then (+ pos l)
+		for pos = (search split-string string :start2 n)
+		if pos collect (subseq string n pos)
+		else collect (subseq string n)
+		while pos))
+
+(defmacro printlst(var)
+	`(lst ,var))
+
+(defun list+ (lst n)
+  (mapcar #'(lambda (x) (+ x n))
+          lst))
+
+(list+ '(1 2 3) 11)
+
+(let ((count 0))
+  (defun new-id () (incf count))
+  (defun reset-id () (setq count 0)))
+
+(new-id)
+(reset-id)
+
+(defun make-adder (n)
+  #'(lambda (x) (+ x n)))
+
+(defvar add2 (make-adder 2))
+(defvar add7 (make-adder 7))
+
+(funcall add2 10)
+
+(defun count-instances (obj lsts)
+  (labels ((instances-in (lst)
+             (if (consp lst)
+                 (+ (if (eq (car lst) obj) 1 0)
+                    (instances-in (cdr lst)))
+                 0)))
+    (mapcar #'instances-in lsts)))
+
+(count-instances 'a '((a b c) (d a r a p) (d a s h)))
+
+(defun fastsum (n)
+  (labels ((tri (c n)
+             (declare (type fixnum n c))
+             (if (zerop n)
+                 c
+                 (tri (the fixnum (+ n c))
+                      (the fixnum (- n 1))))))
+    (tri 0 n)))
+
+(fastsum 9999)
+
+(defun good-reverse (lst)
+  (labels ((rev (lst acc)
+             (if (null lst)
+                 acc
+                 (rev (cdr lst) (cons (car lst) acc)))))
+    (rev lst nil)))
+
+(good-reverse '(1 2 3))
+
+(car (truncate 26.6898))
+
+(multiple-value-bind (int frac) (truncate 25.42)
+  (list int frac))
+
+(defun myPower (x)
+  (values x (sqrt x) (expt x 2)))
+
+(multiple-value-bind (orig sq ex) (myPower 5)
+  (list orig sq ex))
+
+(last '(1 2 3))
+
+(defun single (lst)
+  (and (consp lst) (not (cdr lst))))
+
+(defun append1 (lst obj)
+  (append lst (list obj)))
+
+(append1 '(1 2 3 ) 'a)
+
+(defun conc1 (lst obj)
+  (nconc lst (list obj)))
+
+(conc1 '(1 2 3) 'a)
+
+(defun mklist (obj)
+  (if (listp obj) obj (list obj)))
+
+(mklist '(a b c))
+
+(defun longer (x y)
+  (labels ((compare (x y)
+             (and (consp x)
+                  (or (null y)
+                      (compare (cdr x) (cdr y))))))
+    (if (and (listp x) (listp y))
+        (compare x y)
+        (> (length x) (length y)))))
+
+(longer '(1 2 3 4) '(1 2 3 4 5))
+
+(defun filter (fn lst)
+  (let ((acc nil))
+    (dolist (x lst)
+      (let ((val (funcall fn x)))
+        (if val (push val acc))))
+    (nreverse acc)))
+
+(mapcan #'(lambda (x) (if (numberp x) (1+ x)))
+        '(1 a 2 b 3 4 y 7))
+
+(defun group (source n)
+  ;;Broken due to cons understanding.
+  (if (zerop n) (error "zero length"))
+  (labels ((rec (acc source)
+             (let ((rest (nthcdr n source)))
+               (if (consp rest)
+                   (rec (cons acc (subseq source 0 n)) rest)
+                   (cons source acc)))))
+    (if source (rec nil source) nil)))
+
+(group '(a b c d e f g) 2)
+

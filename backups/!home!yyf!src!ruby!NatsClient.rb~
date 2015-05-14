@@ -1,0 +1,5 @@
+require "nats/client"
+
+NATS.start do
+  
+NATS.end

@@ -1,0 +1,14 @@
+require 'redis'
+
+
+class RedisDAOService
+    attr_reader :redisDAO
+    attr_writer :redisDAO
+
+    def initialize(serverAddr)
+        ip,port = serverAddr.split(":")
+        @redisDAO = Redis.new(:host => ip, :port => port)
+    end
+
+    
+end

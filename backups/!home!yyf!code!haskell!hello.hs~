@@ -1,0 +1,4 @@
+doubleNum x = (if x > 100 then x else x * 2) + 1
+
+doubleMin x y = (if x < y then x else y)
+

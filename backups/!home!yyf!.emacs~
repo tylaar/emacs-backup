@@ -1,0 +1,185 @@
+(setenv "HOME" "/home/yyf")
+(setq default-directory "~/")
+(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/clang-complete")
+(set-default-font "monospace-9")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(quack-programs (quote ("/home/yyf/tools/chicken/csi -:c" "/home/yyf/tools/larceny/larceny" "bigloo" "csi" "csi -hygienic" "gosh" "gracket" "gsi" "gsi ~~/syntax-case.scm -" "guile" "kawa" "mit-scheme" "racket" "racket -il typed/racket" "rs" "scheme" "scheme48" "scsh" "sisc" "stklos" "sxi")))
+ '(save-place t nil (saveplace)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-solarized-light)
+
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+
+(add-to-list 'load-path "~/.emacs.d/anything-config")
+(require 'anything-config)
+
+(add-to-list 'load-path "~/.emacs.d/slime/")  ; your SLIME directory
+(setq inferior-lisp-program "/usr/local/bin/sbcl") ; your Lisp system
+(require 'slime)
+(slime-setup)
+
+;;(add-to-list 'load-path "~/.emacs.d/emacs-starter-kit")
+;;(require 'emacs-starter-kit)
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Add in your own as you wish:
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings auto-complete)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict/")
+(ac-config-default)
+
+(define-key ac-mode-map  [(control tab)] 'auto-complete)  
+
+
+;;Starting the emacs, what will happend?
+
+(global-set-key [f11] 'my-fullscreen)
+
+;全屏
+(defun my-fullscreen ()
+  (interactive)
+  (x-send-client-message
+   nil 0 nil "_NET_WM_STATE" 32
+   '(2 "_NET_WM_STATE_FULLSCREEN" 0))
+)
+
+;最大化
+(defun my-maximized ()
+  (interactive)
+  (x-send-client-message
+   nil 0 nil "_NET_WM_STATE" 32
+   '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0))
+  (x-send-client-message
+   nil 0 nil "_NET_WM_STATE" 32
+   '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
+)
+;启动时最大化
+;;(my-maximized)
+
+
+;Minimized
+
+;;(setq default-frame-alist ' ((height . 50)(width . 200)))
+;;(eshell)
+;;(server-start)
+;;(slime)
+;;(split-window-horizontally)
+;;(split-window-vertically)
+;;(select-window (next-window))
+;;(set-window-buffer (selected-window) "*eshell*")
+;;(set-window-buffer )
+;;(select-window (previous-window))
+;;(set-window-buffer (selected-window) "*scratch*")
+
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+
+(setq ruby-indent-level 4)
+
+(setq pop-up-frames t)
+
+;;(require 'framemove)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(require 'frame-cmds)
+
+
+(put 'kill-ring-save 'interactive-form
+     '(interactive
+       (if (use-region-p)
+           (list (region-beginning) (region-end))
+         (list (line-beginning-position) (line-beginning-position 2)))))
+
+(put 'kill-region 'interactive-form      
+     '(interactive
+       (if (use-region-p)
+           (list (region-beginning) (region-end))
+         (list (line-beginning-position) (line-beginning-position 2)))))
+
+(if (eq major-mode 'slime-repl-mode)
+    slime-repl-input-start-mark
+  (line-beginning-position))
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
+
+(eval-after-load 'ruby-mode
+  '(add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings))
+
+(require 'multi-term)
+
+(add-to-list 'load-path
+             "~/.emacs.d/elpa/yasnippet-0.8.0")
+(require 'yasnippet) ;; not yasnippet-bundle
+;;(yas/initialize)
+;;(yas/load-directory "~/.emacs.d/elpa/yasnippet-0.8.0/snippets")
+(yas-global-mode 1)
+
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+(load "flymake-ruby-config.el" )
+
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/buffer-stack")
+(require 'buffer-stack)
+
+;; I use these key-bindings:
+
+;;
+(global-set-key [(f9)] 'buffer-stack-bury)
+(global-set-key [(control f9)] 'buffer-stack-bury-and-kill)
+(global-set-key [(f10)] 'buffer-stack-up)
+(global-set-key [(f11)] 'buffer-stack-down)
+(global-set-key [(f12)] 'buffer-stack-track)
+(global-set-key [(control f12)] 'buffer-stack-untrack)
+
+
+
+(setq multi-term-program "/usr/local/bin/zsh")
+
+(require 'quack)
+
+;; The binary of your interpreter
+(setq scheme-program-name "guile")
+ 
+;; This hook lets you use your theme colours instead of quack's ones.
+(defun scheme-mode-quack-hook ()
+  (require 'quack)
+  (setq quack-fontify-style 'emacs))
+(add-hook 'scheme-mode-hook 'scheme-mode-quack-hook)
+
+;;(define-key c-mode-base-map [(f7)] 'compile)
+
+(setq scheme-program-name "/home/yyf/tools/chicken/bin/csi -:c")

@@ -1,0 +1,8 @@
+print "inner now: " , inner
+def outer():
+    print "Outer 1"
+    def inner():
+        print "Inner 1"
+    print "Outer 2", inner
+    inner()
+print "Import" , outer

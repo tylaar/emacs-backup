@@ -1,0 +1,2 @@
+testCXX11:testCXX11.cxx
+	clang++ testCXX11.cxx -o testCXX11 -std=c++11

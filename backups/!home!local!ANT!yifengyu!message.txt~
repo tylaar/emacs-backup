@@ -1,0 +1,24 @@
+=What's new message platform's feature=
+*Message queue facility introduced. By integrating the latest message
+queue service inside company, we can deprecate the old DB message
+queue and low down the high CPU load.
+*Mass-data storage level design. By introducing new hybrid storage
+architecture, we can store message payload directly to S3, which is
+good at storing massive data and easy to scale. This makes the system
+easy to handle peaking data scenario.
+*new Status tracking layer. New Status tracking layer inherits a lot from
+the old DB message table schema. However, this time, status tracking
+layer is not a queue for high frequency selection. Status tracking
+layer mainly maintains the status of messages flowing inside platform,
+and publish more user friendly metrics to outside world, for monitor and operation
+purpose. 
+*AWS targeted. The platform is designed and implemented directly on
+EC2 platform, which means dropship team can deprecate legacy
+infrastructure for messaging system in the future easily. 
+*Service oriented architecture(SOA) design. SOA has become the most
+common architecture inside Amazon these days. making service
+independently inside dropship can easily give our system more
+modularity and boundaries, so problems and issues can be identified
+more quickly. Bug fixing/Feature implementation can also benefit from
+SOA architecture.New message platform heavily applied Coral service
+techniques inside, which makes platform a more SOA based platform.

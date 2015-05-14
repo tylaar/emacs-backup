@@ -1,0 +1,14 @@
+file = open("/home/local/ANT/yifengyu/Downloads/add")
+
+map = {}
+
+for line in file:
+    trimed = line.strip();
+    list = trimed.split(" ");
+    if list[0] in map:
+        map[list[0]] = map[list[0]] + int(list[1])
+    else:
+        map[list[0]] = int(list[1])
+
+for k,v in map.items():
+    print k + "," + str(v)

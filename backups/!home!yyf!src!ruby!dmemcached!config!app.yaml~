@@ -1,0 +1,3 @@
+defaults: &default
+          daoAddress: "162.105.146.28:6379"
+          natsAddress: "162.105.146.178:4242"

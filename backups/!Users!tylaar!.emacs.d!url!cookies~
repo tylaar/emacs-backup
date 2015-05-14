@@ -1,0 +1,15 @@
+;; Emacs-W3 HTTP cookies file
+;; Automatically generated file!!! DO NOT EDIT!!!
+
+(setq url-cookie-storage
+ '(("marmalade-repo.org"
+  [url-cookie "httpOnly" nil "Wed, 17 Apr 2013 15:01:04 GMT" "/" "marmalade-repo.org" nil]
+  [url-cookie "connect.sid" "o0DMBV6F38J8Rb8VPVlCZ7Ju.pC0oNNSMC3zONu4DBB5nroureQoY2WG6LGV78%2FiLNtU" "Wed, 17 Apr 2013 15:01:04 GMT" "/" "marmalade-repo.org" nil]))
+)
+(setq url-cookie-secure-storage
+ 'nil)
+
+;; Local Variables:
+;; version-control: never
+;; no-byte-compile: t
+;; End:

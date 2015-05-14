@@ -1,0 +1,16 @@
+require "nats/client"
+require_relative "memcachedAccessor"
+
+class DMemServer
+    attr_writer :memcachedAccessor, :serverName
+    
+    def initialize(mcAccessor)
+        @memcachedAccessor = mcAccessor
+        @serverName = mcAccessor.name
+    end
+
+    def start()
+        
+    end
+    
+end

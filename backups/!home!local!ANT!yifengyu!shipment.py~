@@ -1,0 +1,23 @@
+import os
+
+file_obj = open("/home/local/ANT/yifengyu/insert")
+write_obj = open("/home/local/ANT/yifengyu/selete.txt","w")
+
+for line in file_obj:
+    trimed = line.strip()
+    list = trimed.split(" ");
+    first = list[0]
+    print first
+    if first == "insert":
+        writeResult = "select * from " + list[2]+" where warehouse_id in ('XDEH','XDEI','XDEJ','XDEK');\n";
+        write_obj.writelines(writeResult);
+        
+    #writeResult = shipment + ",\n";
+
+    #write_obj.writelines(writeResult);
+    #write_obj.writelines(delete_str1)
+    #write_obj.writelines(delete_str4)
+    #write_obj.writelines(delete_str2)
+    #write_obj.writelines(delete_str3)
+    
+    #print shipment

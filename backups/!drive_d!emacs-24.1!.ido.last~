@@ -1,0 +1,46 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("d:/emacs-24.1/" . ".emacs.d/")
+ ("d:/emacs-24.1/.emacs.d/" . "themes/")
+ ("d:/coded/" . "intellij-colors-solarized/")
+ ("d:/" . "emacs-24.1/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "d:/emacs-24.1/.emacs.d/themes/"
+ "d:/coded/lisp/"
+ "d:/emacs-24.1/"
+ "d:/emacs-24.1/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "color-theme-library.el"
+ "sbcl_test.lisp"
+ ".emacs"
+ "win.lisp"
+ "color-theme.el"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("d:/emacs-24.1/.emacs.d/themes/" (20664 23762) "color-theme-library.el" "color-theme-example.el" "../" "./")
+
+ ("d:/emacs-24.1/.emacs.d/slime/" (20547 5605) "xref.lisp" "test.sh" "swank.lisp" "swank.asd" "swank-source-path-parser.lisp" "swank-source-file-cache.lisp" "swank-scl.lisp" "swank-sbcl.lisp" "swank-rpc.lisp" "swank-match.lisp" "swank-loader.lisp" "swank-lispworks.lisp" "swank-gray.lisp" "swank-ecl.lisp" "swank-corman.lisp" "swank-cmucl.lisp" "swank-clisp.lisp" "swank-ccl.lisp" "swank-backend.lisp" "swank-allegro.lisp" "swank-abcl.lisp" "start-swank.lisp" "slime.el" "slime-autoloads.el" "sbcl-pprint-patch.lisp" "README.~1.16.~" "README" "PROBLEMS" "nregex.lisp" "NEWS" "mkdist.sh" "metering.lisp" "hyperspec.el" "HACKING" "doc/" "CVS/" "contrib/" "ChangeLog" ".cvsignore" "../" "./")
+
+ ("d:/coded/lisp/" (20664 53845) "win.lisp" "sbcl_test.lisp" "../" "./")
+
+ ("d:/emacs-24.1/" (20664 23947) "site-lisp/" "README.W32" "README" "lisp/" "leim/" "info/" "etc/" "COPYING" "BUGS" "bin/" ".slime/" ".recentf" ".ido.last" ".emacs~" ".emacs.d/" ".emacs-places" ".emacs" "#.emacs#" "##.emacs##" "../" "./")
+
+ ("d:/emacs-24.1/.emacs.d/" (20547 11928) "themes/" "slime/" "places" "eshell/" "emacs-starter-kit/" "elpa/" "color-theme.el" "backups/" "auto-save-list/" "ac-comphist.dat" ".smex-items" "../" "./")
+
+ ("d:/coded/intellij-colors-solarized/" (20381 51716) "Solarized_Colors.pdf" "Solarized Light.xml" "Solarized Dark.xml" "settings.jar" "README.md" "buildjar.sh" "buildjar.bat" "../" "./")
+
+ ("d:/coded/" (20659 4399) "yyf.rar" "yyf-branch/" "yyf/" "WIN32MT/" "typhoeus-0.4.2.gem" "TomcatApp/" "tfs-1.3/" "tfs/" "test.txt" "test.input~" "test.input" "test.cpp~" "test.cpp" "tempcode/" "subversion-1.7.0.zip" "subversion-1.7.0/" "stund/" "stl.zip" "SpringSource-spring-framework-v3.2.0.M2-219-g242bf7c/" "SpringSource/" "simple-echo/" "serverside-0.4.5.4.gem" "serverside/" "scope.ml" "rake-0.8.7/" "python/" "ocaml/" "ngx_module_echo.c~" "ngx_module_echo.c" "ngx_devel_kit/" "nginx-0.8.53/" "mp6grader/" "monitor/" "moban(0).rar" "moban/" "mime-types-1.19.gem" "metaid-1.0.gem" "MazeGUI/" "lunar/" "loucomp.tar.Z" "loucomp.tar/" "lisp/" "lint.py" "jsp/" "jetty-8.1.4/" "javascript/" "intellij-colors-solarized/" "highdefinition.txt" "header_test.h" "hadoop-0.22.0/" "hadoop-0.20.2.tar.gz" "hadoop-0.20.2/" "hadoop/" "ffi-1.0.11.gem" "event_machine-0.3.1.gem" "erubis-2.7.0.gem" "echo-nginx-module/" "dir_monitor/" "cpplint.py~" "cpplint.py" "code/" "brace_test.cpp" "boost_asio/" "bloom/" "asm/" "apache-mina-2.0.4/" "acm/" "3rdparty/" "0.4.5.4" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

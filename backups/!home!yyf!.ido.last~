@@ -1,0 +1,129 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/yyf/src/ruby/dmemcached/" . "webserver/")
+ ("/home/yyf/src/ruby/" . "dmemcached/")
+ ("/home/yyf/.emacs.d/plugins/" . "buffer-stack/")
+ ("/home/yyf/.emacs.d/" . "elpa/")
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/" . "definitions/")
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/" . "ruby-mode/")
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/" . "snippets/")
+ ("/home/yyf/.emacs.d/elpa/" . "yasnippet-0.8.0/")
+ ("/home/yyf/src/ruby/nats-master/lib/" . "nats/")
+ ("/home/yyf/src/ruby/nats-master/" . "lib/")
+ ("/home/yyf/" . "src/")
+ ("/" . "home/")
+ ("/home/" . "yyf/")
+ ("/home/yyf/tools/thrift/bin/" . "grammar/")
+ ("/home/yyf/tools/thrift/" . "bin/")
+ ("/home/yyf/src/" . "ruby/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/yyf/src/ruby/nats-master/lib/nats/"
+ "/home/yyf/src/ruby/dmemcached/"
+ "/home/yyf/src/ruby/dmemcached/webserver/"
+ "/home/yyf/src/ruby/dmemcached/config/"
+ "/home/yyf/src/"
+ "/home/yyf/"
+ "/home/yyf/src/ruby/"
+ "/home/yyf/src/ruby/em/"
+ "/home/yyf/src/scheme/"
+ "/home/yyf/.emacs.d/"
+ "/home/yyf/.emacs.d/plugins/buffer-stack/"
+ "/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/definitions/"
+ "/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/"
+ "/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/control structure/"
+ "/home/yyf/.emacs.d/elpa/color-theme-solarized-20120301/"
+ "/home/yyf/src/ruby/nats-master/lib/nats/server/"
+ "/home/yyf/Desktop/"
+ "/home/yyf/src/c++/"
+ "/home/yyf/src/python/"
+ "/home/yyf/tools/thrift/bin/grammar/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "server.rb"
+ "testclient.rb"
+ "dmemSinatraServer.rb"
+ "dmemWebNats.rb"
+ "testServer.rb"
+ "consistentHash.rb"
+ "dmemWebServer.rb"
+ "setting.yaml"
+ "memcachedAccessor.rb"
+ "dmemServer.rb"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/yyf/src/ruby/" (20871 20474) "ZC2604-q9vCKWoQ5vTAaTVkb8IpQ33" "mailtest.rb" "SimpleChatServer.rb" "next_tick.rb" "ZC1304-TDya76wLrb~LbjJjdmhDU33" "em/" "railsTest/" "eventmachine-master/" "ZC0004-QjK9z4wlVEZyOGQ1k7lxK33" "ZC4104-kOB75qW0~OreQR1MGDARD33" "./" "ZC4105-cgLEA0A9vqyZOWU00SxqH33" "NatsClient.rb" "../" "ZC2405-BXXck9AFdmRQZztquGtkO33" "ZC1004-aBiB_r1E5_XGZjprLdgmC33" "#MyDeferrable.rb#" "MyDeferrable.rb" "fing_no_more_than_flymake.rb" "natsRequest.rb" "ZC1404-Ll5AgcKQn425CVUEmXkEL33" "ZC3804-IVF_AkFI_~3ZGkYXGXHlQ33" "eventmachine-master.zip" "easyServer_flymake.rb" ".zcache/" "ZC1404-KFgXUxB0RFZiSRVE7lAvI33" "fing_no_more_than.rb" "next_tick_loop.rb" "df.rb" "easyServer.rb" "NatsClient" "dmemcached/" "nats-master/" "nats-master.zip" "Song.rb" "Tree.rb")
+
+ ("/home/yyf/src/ruby/dmemcached/" (20871 27250) "webserver/" "sinatraTest.rb" "#consistentHash.rb#" "./" "memcachedAccessor.rb" "redisDAOServiceBuilder.rb" "../" "pub.rb" "jsonTest.rb" ".#testServer.rb" "config/" "#testServer.rb#" "memDAOServiceBuilder.rb" "redisDAOServiceDealer.rb" "testServer.rb" "memDAOService.rb" ".zcache/" "consistentHash.rb" "dmemServer.rb" ".#consistentHash.rb" "testclient.rb")
+
+ ("/home/yyf/src/ruby/dmemcached/webserver/" (20871 21804) "./" "../" "#dmemWebNats.rb#" "dmemWebNats.rb" ".#dmemWebNats.rb" ".#dmemWebServer.rb" "dmemSinatraServer.rb" "dmemWebServer.rb")
+
+ ("/home/yyf/src/ruby/dmemcached/config/" (20871 6720) "./" "#setting.yaml#" "../" ".#setting.yaml" "app.yaml" "setting.yaml" "setting.rb")
+
+ ("/home/yyf/" (20868 47262) "WebstormProjects/" ".Xauthority" ".profile" "PycharmProjects/" ".goutputstream-ADQDPW" ".goutputstream-9IA2TW" "pjj" ".fonts/" ".ssh/" ".emacs_bak2" ".gksu.lock" ".aliedit/" ".mozilla/" ".pip/" ".PyCharm20/" "./" "Ashare.tar.gz" ".bash_logout" ".goutputstream-C755QW" "emacs.d.config.tar.gz" ".npm/" ".emacs" "IPGW PKU-yyf" ".gem/" ".pulse-cookie" ".bash_history" "sun-javadb-javadoc-10.6.2-1.1.i386.rpm" ".node-gyp/" "phpmyadmin.tar.gz" ".goutputstream-RHQMPW" "sun-javadb-docs-10.6.2-1.1.i386.rpm" ".xinput.d/" "tools/" ".IntelliJIdea11/" ".cache/" "../" "Documents/" ".eric4/" "sun-javadb-common-10.6.2-1.1.i386.rpm" ".xsession-errors" ".vim/" ".emacs.d/" "jdk-6u37-linux-x64-rpm.bin" ".matplotlib/" "sun-javadb-core-10.6.2-1.1.i386.rpm" ".thunderbird/" "jre-6u37-linux-x64-rpm.bin" ".IdeaIC12/" ".pki/" ".libvirt/" "jdk-6u27-linux-i586.bin" "下载/" "fit-frame.el" "lib/" "sort.sh" ".quack/" "super-smack-1.3.tar.gz" "Public/" ".lesshst" ".emacs~" ".bundler/" ".ido.last" ".gnome2/" ".pulse/" "jscheme.jar" "settings.jar" ".m2/" ".virtinst/" ".subversion_IDEA/" "config.default.php" "travel.sh" "Videos/" "history" ".ipgw/" "Desktop/" "configs.tar.gz" ".fontconfig/" "emacs.config" ".java/" ".hplip/" "examples.desktop" ".compiz-1/" ".dmrc" "xen/" ".dbus/" ".recentf" "jdk-6u37-linux-amd64.rpm" ".gstreamer-0.10/" ".pam_environment" "phpmyadmin/" ".slime/" "Templates/" ".mysql_history" "tmp/" ".WebIde50/" ".gvfs/" ".ICEauthority" ".bashrc" ".gemrc" "service" "data/" "Pictures/" "图片/" ".wireshark/" ".viminfo" ".wgetrc" ".config/" ".subversion/" ".zcache/" ".zshrc" ".w3m/" ".uml/" ".virsh/" ".xsession-errors.old" "sun-javadb-demo-10.6.2-1.1.i386.rpm" "Downloads/" ".idlerc/" ".gtk-bookmarks" ".RubyMine40/" ".gconf/" "sun-javadb-client-10.6.2-1.1.i386.rpm" ".thumbnails/" ".mission-control/" ".local/" "mysql-connector-java-5.1.22.tar.gz" "#.bashrc#" ".zhistory" "Ubuntu One/" ".launchpadlib/" ".zcompdump" "RubymineProjects/" "src/" "Music/" ".gnome/" ".mplayer/" "domains/" "IdeaProjects/" ".VirtualBox/" "VirtualBox VMs/" "12settings.jar" "log/" "emacs-config.tar.gz")
+
+ ("/home/yyf/src/" (20852 65150) "print.c" "stree.cpp" "seasoned.scm" "ruby/" "lis.py" "test.scm" "./" "a.out" "workspace/" "../" "test.bc" "boost_1_53_0.tar.gz" "test.c" "scheme/" "boost_1_53_0/" "test_llvm.cpp" "travel.sh" "c++/" "test.cpp" "rabinfingerprint-master/" "#seasoned.scm#" ".zcache/" "test_file" "jscheme/" "python/" "#test_llvm.cpp#")
+
+ ("/home/yyf/src/scheme/" (20840 56779) "test.scm" "./" "../" "#testScheme#" ".#test.scm")
+
+ ("/home/yyf/src/ruby/em/" (20825 13980) "./" "../" "emHttpServer.rb" "timer.rb")
+
+ ("/home/yyf/.emacs.d/" (20815 47438) "color-theme.el" "framemove.el" "inf-ruby.el" "ac-dict/" "slime/" "flymake-ruby-config.el" "quack.el" "auto-save-list/" "plugins/" "ac.tgz" "backups/" "session.10ad0ebd305ad6c6ea136404687619723200000021080061" "./" "url/" "elpa/" "session.1050be83633d94738d131470957361161100000012960038" "haskell-mode-2.8.0.tar.gz" "../" "session.1050be83633d94738d131471339595646300000012960041" "places" "haskell-mode-2.8.0/" "plugin.tgz" "emacs-starter-kit/" "expand-region.el-master.zip" "session.1018fe786d5c111ffb131676266810601300000013120114" "ac-comphist.dat" "eshell/" "ebs.el" "frame-cmds.el" "clang-complete/" ".smex-items" "themes/" "frame-fns.el" "anything-config/" "expand-region/" "autofit-frame.el" "session.1021411de372abfa98131891813142653100000013260034")
+
+ ("/home/yyf/.emacs.d/plugins/buffer-stack/" (20815 7290) "buffer-stack-suppl.el" "./" "../" "buffer-stack.el")
+
+ ("/home/yyf/.emacs.d/plugins/" (20815 7218) "slime/" "./" "haskell-mode-2.8.0.tar.gz" "../" "slime.tar.gz" "haskell-mode-2.8.0/" "yasnippet-0.6.1c.tar.bz2" "auto-complete-1.3.1.tar.bz2" "brianjcj-auto-complete-clang-0e0463d.tar.gz" "ebs.el" "bison-mode.el" "buffer-stack/" "auto-complete/" "yasnippet/" "auto-complete-clang/")
+
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/" (20815 7145) "./" "#yasnippet.el#" "README" "yasnippet-pkg.el" "../" ".#yasnippet.el" "dropdown-list.elc" "yasnippet-autoloads.el" "yasnippet-pkg.elc" "snippets/" "yasnippet.el" "yasnippet.elc" "dropdown-list.el" "ChangeLog")
+
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/definitions/" (20815 3770) "am" "./" "../" "r" "Comp" "mm" "w" "rw" "cls" "cla")
+
+ ("/home/yyf/.emacs.d/elpa/" (20815 6236) "idle-highlight-mode-1.1.2/" "./" "find-file-in-project-3.2/" "cmake-mode-20110824/" "../" "ido-ubiquitous-1.3/" "minimap-1.0/" "slime-repl-20100404/" "starter-kit-bindings-2.0.2/" "multi-term-0.8.8/" "slime-20100404.1/" "undo-tree-readme.txt" "yasnippet-0.8.0/" "flymake-easy-0.4/" "starter-kit-2.0.3/" "magit-1.1.1/" "clojurescript-mode-0.5/" "auto-complete-1.4/" "color-theme-solarized-20120301/" "flymake-ruby-0.8/" "popup-0.5/" "paredit-22/" "expand-region-0.8.0/" "elisp-slime-nav-0.2/" "yasnippet-readme.txt" "archives/" "smex-1.1.4/" "clojure-mode-1.11.5/" "starter-kit-lisp-2.0.3/" "undo-tree-0.6.3/")
+
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/control structure/" (20815 3769) "./" "until" "../" "ife" "if" "upt" "tim" "forin" "while" "when")
+
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/ruby-mode/" (20815 3769) "collections/" "./" "../" "definitions/" ".yas-make-groups" "general/" "control structure/" ".yas-parents")
+
+ ("/home/yyf/.emacs.d/elpa/yasnippet-0.8.0/snippets/" (20815 3778) "latex-mode/" "csharp-mode/" "./" "objc-mode/" "erlang-mode/" "markdown-mode/" "../" "f90-mode/" "css-mode/" "cc-mode/" "c-mode/" "ruby-mode/" "sql-mode/" "text-mode/" "c++-mode/" "rst-mode/" "emacs-lisp-mode/" "cperl-mode/" "scala-mode/" "nxml-mode/" "html-mode/" "snippet-mode/" "perl-mode/" "python-mode/")
+
+ ("/home/yyf/.emacs.d/elpa/color-theme-solarized-20120301/" (20813 44214) "solarized-dark-theme.elc" "color-theme-solarized.el" "./" "color-theme-solarized-pkg.el" "../" "solarized-dark-theme.el" "solarized-definitions.elc" "solarized-light-theme.el" "solarized-light-theme.elc" "color-theme-solarized-autoloads.el" "color-theme-solarized-pkg.elc")
+
+ ("/home/yyf/.emacs.d/elpa/minimap-1.0/" (20813 43362) "./" "minimap-pkg.el" "minimap-pkg.elc" "../" "minimap.elc" "minimap.el" "minimap-autoloads.el")
+
+ ("/bin/" (20672 22466) "znew" "ntfswipe" "netstat" "kill" "cpio" "ip" "lesspipe" "bzip2recover" "./" "static-sh" "../" "ping6" "bzip2" "ntfs-3g.usermap" "mountpoint" "ntfsck" "cgroups-mount" "lessecho" "zcat" "findmnt" "mknod" "whiptail" "lessfile" "bzcmp" "vdir" "sh.distrib" "open" "init-checkconf" "nc" "zmore" "mt" "umount" "dumpkeys" "setupcon" "ntfs-3g" "ntfsinfo" "touch" "bzcat" "run-parts" "ntfs-3g.probe" "cp" "dash" "echo" "gunzip" "stty" "bzless" "chown" "bzdiff" "running-in-container" "bzgrep" "dmesg" "ntfs-3g.secaudit" "mv" "dbus-uuidgen" "lesskey" "ntfscmp" "bzexe" "rnano" "ls" "true" "mktemp" "rmdir" "fgconsole" "lowntfs-3g" "plymouth" "bzmore" "chmod" "sh" "bash" "sed" "chacl" "zforce" "zdiff" "nc.openbsd" "more" "ntfsdecrypt" "unicode_start" "dbus-daemon" "sleep" "rbash" "fgrep" "plymouth-upstart-bridge" "bunzip2" "ed" "chgrp" "ntfsfix" "dbus-cleanup-sockets" "vmmouse_detect" "busybox" "egrep" "bzegrep" "tar" "openvt" "zfgrep" "readlink" "cgroups-umount" "df" "pwd" "which" "ln" "mt-gnu" "ps" "login" "grep" "dd" "getfacl" "dir" "kbd_mode" "rm" "domainname" "chvt" "pidof" "ntfsmftalloc" "ntfsdump_logfile" "zegrep" "uname" "cat" "netcat" "zcmp" "less" "ss" "setfacl" "mount" "lsmod" "nisdomainname" "zgrep" "ntfsmove" "ypdomainname" "zless" "sync" "ntfsls" "lsblk" "fusermount" "ntfstruncate" "gzip" "gzexe" "ntfscluster" "setfont" "false" "zsh" "hostname" "uncompress" "nano" "initctl2dot" "bzfgrep" "tailf" "loadkeys" "su" "fuser" "mkdir" "tempfile" "ntfscat" "ping" "ulockmgr_server" "dnsdomainname" "date")
+
+ ("/home/yyf/Desktop/" (20668 48840) "./" "../" "emacs")
+
+ ("/home/yyf/src/ruby/nats-master/lib/nats/server/" (20808 29455) "./" "../" "connz.rb" "util.rb" "connection.rb" "server.rb" "varz.rb" "const.rb" "options.rb" "sublist.rb")
+
+ ("/home/yyf/src/ruby/nats-master/lib/nats/" (20797 4121) "./" "../" "server/" "ext/" "server.rb" "client.rb")
+
+ ("/home/yyf/src/ruby/nats-master/lib/" (20797 4121) "./" "../" "nats/")
+
+ ("/home/yyf/src/ruby/nats-master/" (20797 4121) "bin/" "./" "Gemfile" "../" "benchmark/" "lib/" "Gemfile.lock" "COPYING" "examples/" "TODO" "README.md" "nats.gemspec" ".travis.yml" "spec/" "Rakefile" "HISTORY.md" ".gitignore")
+
+ ("/home/yyf/src/c++/" (20806 47202) "./" "../" "Makefile" "testCXX11.cxx" "testCXX11" ".zcache/" "test11.cxx")
+
+ ("/home/" (20721 6229) "./" "tools/" "../" "lost+found/" "yyf/")
+
+ ("/home/yyf/src/python/" (20725 26669) "sample1.pyc" "RoomNumber.pyc" "./" "DummyClosure.pyc" "../" "listbox.py" "testTK.py" "complexGUI.py" "DummyClosure.py" "#test.py#" "test.py" "tkinter_test.py" ".#test.py" "sample1.py" "RoomNumber.py")
+
+ ("/home/yyf/tools/thrift/bin/grammar/" (20723 49872) "./" "tutorial.thrift" "../" ".#tutorial.thrift" "shared.thrift" "gen-py/")
+
+ ("/home/yyf/tools/thrift/bin/" (20723 47226) "./" "../" "grammar/" "thrift")
+
+ ("/home/yyf/tools/thrift/" (20723 46881) "bin/" "./" "../" "lib/" "include/")
+
+ ("/home/yyf/tools/" (20723 46881) "ideaIU-11.1.2.tar.gz" "maven/" "newPypy/" "clang-3.1.src.tar.gz" "zsh-5.0.0.tar.gz" "httpd-2.2.22/" "./" "ant/" "protobuf-2.4.1/" "llvm-3.1.src/" "thrift-0.9.0.tar.gz" "thrift-0.9.0/" "pycharm-2.6.3/" "idea-IU-117.418/" "../" "protobuf/" "sbcl-1.1.2-x86-64-linux/" "emacs/" "Sublime Text 2/" "postgreSQL/" "xen-4.2.0.tar.gz" "iPython/" "postgresql-9.0.9.tar.gz" "imPypy/" "eric4-4.5.8/" "xen-4.2.0/" "ideaIC-12.0.tar.gz" "RubyMine-4.5.4/" "zsh-5.0.0/" "llvm-3.1.src.tar.gz" "xen/" "protobuf-2.4.1.tar.gz" "RubyMine-4.5.4.tar.gz" "apache-ant-1.8.4-bin.tar.gz" "phpMyAdmin-3.5.4-all-languages/" ".zcache/" "comIntelliJ12/" "llvm/" "emacs-24.1/" "postgresql-9.0.9/" "ycsb-0.1.4/" "thrift/" "emacs-24.1.tar.gz")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

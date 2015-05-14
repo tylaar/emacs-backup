@@ -1,0 +1,65 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/tylaar/code/clojure/" . "hello/")
+ ("/Users/" . "tylaar/")
+ ("/" . "Users/")
+ ("/Users/tylaar/" . ".emacs.d/")
+ ("/Users/tylaar/code/" . "clojure/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/tylaar/"
+ "/Users/tylaar/code/clojure/hello/"
+ "/Users/tylaar/.lein/"
+ "/Users/tylaar/RubymineProjects/"
+ "/Users/tylaar/code/haskell/"
+ "/Users/tylaar/.emacs.d/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "hello.clj"
+ "profiles.clj"
+ "Gemfile"
+ "notes"
+ "hello.hs"
+ "abbrev_defs"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/tylaar/" (21844 41208 0 0) "tools/" "sugtTP6GV-YWYefAQJoXveFR-M5X7lI6dJ41Fiz6GswMAgAALAEAAFBO.png" "student_examples (2).xlsx" "settings.jar" "RubymineProjects/" "rubymine" "Public/" "Pictures/" "node_modules/" "new.xlsx" "Music/" "Movies/" "maccode/" "Library/" "ios/" "IdeaProjects/" "Downloads/" "Documents/" "dmglib/" "Desktop/" "code/" "ClionProjects/" "cellphone" "cabal.config" "aria/" "Applications/" "appCodeProjects/" ".viminfo" ".vim/" ".Trash/" ".subversion/" ".ssh/" ".scala_history" ".rnd" ".rediscli_history" ".recentf" ".npm/" ".node-gyp/" ".m2/" ".local/" ".lesshst" ".lein/" ".jrebel/" ".jprofiler8/" ".IntelliJIdea14/" ".ido.last" ".ideaLibSources/" ".gitconfig" ".ghc/" ".gemrc" ".gem/" ".fop/" ".emacs.d/" ".emacs-places" ".emacs" ".DS_Store" ".config/" ".clion10/" ".CFUserTextEncoding" ".cabal/" ".bash_history" ".android/" "#notes#" "../" "./")
+
+ ("/Users/tylaar/code/clojure/hello/" (21835 31180 0 0) "test/" "target/" "src/" "resources/" "README.md" "project.clj" "LICENSE" "hello.clj" "doc/" ".gitignore" "../" "./")
+
+ ("/usr/" (21810 20900 0 0) "X11R6/" "X11/" "standalone/" "share/" "sbin/" "local/" "libexec/" "lib/" "include/" "bin/" "../" "./")
+
+ ("/usr/share/" (21810 20900 0 0) "zsh/" "zoneinfo/" "vim/" "uucp/" "ucupdate/" "tokenizer/" "thermald.bundle/" "texinfo/" "terminfo/" "tabset/" "snmp/" "skel/" "screen/" "sandbox/" "ri/" "pmenergy/" "php/" "misc/" "mecabra/" "man/" "locale/" "langid/" "kdrl.bundle/" "java/" "info/" "icu/" "httpd/" "hiutil/" "groff/" "germantok/" "ftpd/" "file/" "examples/" "emacs/" "doc/" "dict/" "current-os.sdk/" "cups/" "cracklib/" "CoreDuetDaemonConfig.bundle/" "calendar/" "apr-1/" "../" "./")
+
+ ("/usr/share/info/" (21738 50597 0 0) "woman" "widget" "viper" "vip" "uucp.info-8" "uucp.info-7" "uucp.info-6" "uucp.info-5" "uucp.info-4" "uucp.info-3" "uucp.info-2" "uucp.info-1" "uucp.info" "url" "tramp" "texinfo-3" "texinfo-2" "texinfo-1" "texinfo" "speedbar" "smtpmail" "sieve" "ses" "screen.info-5" "screen.info-4" "screen.info-3" "screen.info-2" "screen.info-1" "screen.info" "sc" "reftex" "rcirc" "pgg" "pcl-cvs" "org-2" "org-1" "org" "newsticker" "mh-e-2" "mh-e-1" "mh-e" "message" "info.info" "info-stnd.info" "info" "idlwave" "groff-3" "groff-2" "groff-1" "groff" "gnus-5" "gnus-4" "gnus-3" "gnus-2" "gnus-1" "gnus" "forms" "flymake" "eudc" "eshell" "erc" "emacs-mime" "emacs-8" "emacs-7" "emacs-6" "emacs-5" "emacs-4" "emacs-3" "emacs-2" "emacs-1" "emacs" "elisp-9" "elisp-8" "elisp-7" "elisp-6" "elisp-5" "elisp-4" "elisp-3" "elisp-2" "elisp-10" "elisp-1" "elisp" "eintr-3" "eintr-2" "eintr-1" "eintr" "efaq" "ediff" "ebrowse" "dired-x" "dir" "diff.info" "dc.info" "cl" "ccmode-1" "ccmode" "calc-6" "calc-5" "calc-4" "calc-3" "calc-2" "calc-1" "calc" "bc.info" "bash.info" "autotype" "ada-mode" "../" "./")
+
+ ("/Users/tylaar/code/" (21832 52068 0 0) "tachyon/" "root@123.56.43.220" "redis-unstable.zip" "redis-unstable/" "react-0.13.2.zip" "react-0.13.2/" "phonecat/" "mysql-server/" "jquery.form.min.js" "haskell/" "handsontable/" "flot/" "clojure/" "boost/" "backbone/" "angular.js-master.zip" "angular.js-master/" "angular.js" "angular-1.3.0.14/" ".DS_Store" "../" "./")
+
+ ("/Users/tylaar/code/clojure/" (21832 52157 0 0) "hello/" "demo/" "../" "./")
+
+ ("/Users/tylaar/.lein/" (21826 15720 0 0) "self-installs/" "../" "./")
+
+ ("/Users/tylaar/.emacs.d/" (21832 51913 0 0) "url/" "themes/" "sr-speedbar.el" "slime/" "session.10ae843a39c9efd42137603434449923600000019120050" "session.10ad0ebd305ad6c6ea136404687619723200000021080061" "session.10ab7d3dabf3743459136629143857380600000020870052" "session.1050be83633d94738d131471339595646300000012960041" "session.1050be83633d94738d131470957361161100000012960038" "session.1021411de372abfa98131891813142653100000013260034" "session.101ad09e2c48da0002136688596367156500000021060037" "session.1018fe786d5c111ffb131676266810601300000013120114" "quack.el" "plugins/" "plugin.tgz" "places" "lintnode/" "inf-ruby.el" "haskell-mode-2.8.0.tar.gz" "haskell-mode-2.8.0/" "framemove.el" "frame-fns.el" "frame-cmds.el" "flymake-ruby-config.el" "expand-region.el-master.zip" "expand-region/" "eshell/" "emacs-starter-kit/" "elpa/" "ebs.el" "color-theme.el" "clang-complete/" "backups/" "autofit-frame.el" "auto-save-list/" "anything-config/" "ac.tgz" "ac-dict/" "ac-comphist.dat" "abbrev_defs" ".smex-items" ".emacs.d/" ".emacs-places" "../" "./")
+
+ ("/Users/tylaar/.emacs.d/elpa/" (21832 51988 0 0) "yasnippet-readme.txt" "yasnippet-0.8.0/" "undo-tree-readme.txt" "undo-tree-0.6.3/" "tuareg-2.0.5/" "starter-kit-lisp-2.0.3/" "starter-kit-bindings-2.0.2/" "starter-kit-2.0.3/" "smex-1.1.4/" "slime-repl-20100404/" "slime-20100404.1/" "queue-0.1.1/" "popup-0.5/" "pkg-info-0.5/" "paredit-22/" "multi-term-0.8.8/" "minimap-1.0/" "magit-1.1.1/" "js-comint-0.0.1/" "ido-ubiquitous-1.3/" "idle-highlight-mode-1.1.2/" "haskell-mode-13.7/" "ghci-completion-0.1.3/" "ghc-1.10.2/" "flymake-ruby-0.8/" "flymake-racket-0.40/" "flymake-hlint-0.2/" "flymake-haskell-multi-0.3/" "flymake-easy-0.4/" "flymake-cursor-1.0.2/" "find-file-in-project-3.2/" "expand-region-0.8.0/" "erlang-2.4.1/" "epl-0.7/" "elisp-slime-nav-0.2/" "dash-2.10.0/" "color-theme-solarized-20120301/" "cmake-mode-20110824/" "clojure-mode-4.0.1/" "cider-0.8.2/" "caml-3.12.0.1/" "auto-complete-1.4/" "archives/" "../" "./")
+
+ ("/Users/tylaar/.emacs.d/elpa/cider-0.8.2/" (21832 51999 0 0) "nrepl-client.elc" "nrepl-client.el" "cider.elc" "cider.el" "cider-util.elc" "cider-util.el" "cider-test.elc" "cider-test.el" "cider-stacktrace.elc" "cider-stacktrace.el" "cider-selector.elc" "cider-selector.el" "cider-scratch.elc" "cider-scratch.el" "cider-repl.elc" "cider-repl.el" "cider-pkg.el" "cider-mode.elc" "cider-mode.el" "cider-macroexpansion.elc" "cider-macroexpansion.el" "cider-interaction.elc" "cider-interaction.el" "cider-inspector.elc" "cider-inspector.el" "cider-grimoire.elc" "cider-grimoire.el" "cider-eldoc.elc" "cider-eldoc.el" "cider-doc.elc" "cider-doc.el" "cider-client.elc" "cider-client.el" "cider-classpath.elc" "cider-classpath.el" "cider-browse-ns.elc" "cider-browse-ns.el" "cider-autoloads.el" "cider-apropos.elc" "cider-apropos.el" "../" "./")
+
+ ("/Users/tylaar/RubymineProjects/" (21810 22337 0 0) "Aria/" "Aleph/" "../" "./")
+
+ ("/Users/tylaar/code/haskell/" (21709 56952 0 0) "hello.hs" "../" "./")
+
+ ("/Users/" (21573 2155 0 0) "tylaar/" "Shared/" "Guest/" ".localized" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

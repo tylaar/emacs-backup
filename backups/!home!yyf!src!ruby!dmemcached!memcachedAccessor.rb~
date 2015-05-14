@@ -1,0 +1,6 @@
+require "memcached"
+$cached = Memcached.new("162.105.146.28:11211")
+value = 'hello'
+
+$cache.set 'test' value
+print "this is the value:" + $cache.get("test")

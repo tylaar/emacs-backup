@@ -1,0 +1,9 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	auto func = []()->int{return 4;};
+	std::cout << func << std::endl;
+	return 0;
+}

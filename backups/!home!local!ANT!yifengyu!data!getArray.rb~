@@ -1,0 +1,15 @@
+#!/usr/bin/ruby
+
+filename = "/home/local/ANT/yifengyu/data/statchangelist.txt";
+filetarget = "/home/local/ANT/yifengyu/data/target_state.txt";
+file = File.new("filetarget","w");
+File.foreach(filename) do |line|
+    lines = line.split(/( |\t)+?/);
+    newline = "";
+    for item in lines
+        if !item.eql? " " and !item.eql? "\t"
+            newline += item.strip + ','
+        end
+    end
+    file.puts newline[0..newline.length-2];
+end

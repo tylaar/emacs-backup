@@ -1,0 +1,12 @@
+from Tkinter import *
+
+win = Tk()
+lb = Listbox(win, height = 3)
+lb.pack()
+sb = Scrollbar(win, orient=VERTICAL)
+sb.pack(side=LEFT, fill=Y)
+lb.insert(END, "first entry")
+lb.insert(END, "sencond entry")
+lb.insert(END, "third entry")
+lb.insert(END, "fourth entry")
+          

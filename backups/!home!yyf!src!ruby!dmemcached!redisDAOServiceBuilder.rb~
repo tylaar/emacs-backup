@@ -1,0 +1,10 @@
+require_relative 'redisDAO'
+class RedisDAOServiceBuilder
+    def initialize()
+    end
+
+    def build(serviceAddr)
+        
+    end
+    
+end

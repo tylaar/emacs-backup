@@ -1,0 +1,12 @@
+class Song
+  attr_writer :name, :song, :hits
+  attr_reader :name, :song, :hits
+  def initialize(name,song,hits)
+    @name = name
+    @song = song
+    @hits = hits
+  end
+end
+
+s = Song.new("bach","concerto",260)
+puts s.name + ":" + s.song + ":" + s.hits.to_s

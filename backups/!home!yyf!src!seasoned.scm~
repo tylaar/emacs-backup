@@ -1,0 +1,261 @@
+(define two-in-a-row?
+  (lambda (lat)
+    (cond
+     ((null? lat) #f)
+     (else
+      (or (is-first? (car lat) (cdr lat))
+          (two-in-a-row? (cdr lat)))))))
+
+(define is-first?
+  (lambda  (a lat)
+    (cond ((null? lat) #f)
+          (else (eq? (car lat) a)))))
+
+
+(define two-in-a-row-b?
+  (lambda (preceding lat)
+    (cond ((null? lat) #f)
+          (else (or (eq? (car lat) preceding)
+                    (two-in-a-row-b? (car lat)
+                                     (cdr lat)))))))
+
+(define two-in-a-row-c?
+  (lambda (lat)
+    (cond ((null? lat) #f)
+          (else (two-in-a-row-b? (car lat)
+                                 (cdr lat))))))
+
+(define two-in-a-row-d?
+  (letrec ((W (lambda (preceding lat)
+                  (cond ((null? lat) #f)
+                        (else (or (eq? (car lat) preceding)
+                                  (W (car lat)
+                                     (cdr lat))))))))
+      (lambda (lat)
+        (cond
+         ((null? lat) #f)
+         (else (W (car lat)
+                  (cdr lat)))))))
+
+(define sum-of-prefixes
+  (lambda (tup)
+    (cond ((null? tup) '())
+          (else (sum-of-prefixes-h 0 tup)))))
+
+(define sum-of-prefixes-h
+  (lambda (sum tup)
+    (cond ((null? tup) '())
+          (else (cons (+ sum (car tup))
+                      (sum-of-prefixes-h (+ sum (car tup))
+                                         (cdr tup)))))))
+
+(define new-sum-of-prefixes
+  (letrec ((S (lambda (sum tup)
+                (cond ((null? tup) '())
+                      (else
+                       (cons (+ sum (car tup))
+                             (S (+ sum (car tup))
+                                (cdr tup))))))))
+    (lambda (tup)
+      (cond ((null? tup) '())
+            (else (S 0 tup))))))
+
+(define scramble
+  (lambda (tup)
+    (scramble-inside tup '())))
+
+(define scramble-inside
+  (lambda (tup prefix)
+    (cond ((null? tup) '())
+          (else (cons (pickup (car tup)
+                            (cons (car tup) prefix))
+                      (scramble-inside (cdr tup)
+                                       (cons (car tup) prefix)))))))
+
+(define new-scramble
+  (letrec ((NS (lambda (tup prefix)
+                 (cond ((null? tup) '())
+                       (else
+                        (cons (pickup (car tup)
+                                      (cons (car tup) prefix))
+                              (NS (cdr tup) (cons (car tup) prefix))))))))
+    (lambda (tup)
+      (NS tup '()))))
+
+(define pickup
+  (lambda (num lat)
+    (cond  ((eq? num 1)  (car lat))
+           (else (pickup (- num 1)
+                         (cdr lat))))))
+
+(define Y
+  (lambda (le)
+    ((lambda (f)
+       (f f))
+     (lambda (f)
+       (le (lambda (x)
+             ((f f) x)))))))
+
+(define multirember
+  (lambda (a lat)
+    ((letrec
+         ((mr (lambda (lat)
+                (cond
+                 ((null? lat) '())
+                 ((eq? a (car lat))
+                  (mr (cdr lat)))
+                 (else
+                  (cons (car lat)
+                        (mr (cdr lat))))))))
+       mr)
+     lat)))
+
+(define new-multirember
+  (lambda (a lat)
+    (letrec
+         ((mr (lambda (lat)
+                (cond ((null? lat) '())
+                      ((eq? a (car lat))
+                       (mr (cdr lat)))
+                      (else (cons (car lat)
+                                  (mr (cdr lat))))))))
+       (mr lat))))
+
+(define multirember-f
+  (lambda (test?)
+    (letrec ((m-f (lambda (a lat)
+                    (cond ((null? lat) '())
+                          ((test? (car lat) a)
+                           (m-f a (cdr lat)))
+                          (else (cons (car lat)
+                                      (m-f a (cdr lat))))))))
+      m-f)))
+
+(define member?
+  (lambda (a lat)
+    (letrec ((mbr (lambda (lat)
+                    (cond ((null? lat) #f)
+                          ((eq? (car lat) a)
+                           #t)
+                          (else (mbr (cdr lat)))))))
+      (mbr lat))))
+
+(define union
+  (lambda (set1 set2)
+    (letrec ((U (lambda (set)
+                  (cond ((null? set) set2)
+                        ((M? (car set) set2)
+                         (U (cdr set)))
+                        (else (cons (car set)
+                                    (U (cdr set)))))))
+             (M? (lambda (a lat)
+                  (cond ((null? lat) #f)
+                        ((eq? (car lat) a) #t)
+                        (else (M? a (cdr lat)))))))
+      (U set1))))
+
+(define union
+  (lambda (set1 set2)
+    (letrec ((U (lambda (set)
+                  (cond ((null? set) set2)
+                        ((M? (car set) set2)
+                         (U (cdr set)))
+                        (else (cons (car set)
+                                    (U (cdr set)))))))
+             (M? (lambda (a lat)
+                  (letrec ((N? (lambda (lat)
+                                 (cond ((null? lat) #f)
+                                       ((eq? (car lat) a)
+                                        #t)
+                                       (else (N? (cdr lat)))))))
+                    (N? lat)))))
+      (U set1))))
+
+(define intersect
+  (lambda (set1 set2)
+    (letrec ((I (lambda (set1)
+                  (cond
+                   ((null? set1) '())
+                   ((member? (car set1) set2)
+                    (cons (car set1)
+                          (I (cdr set1))))
+                   (else
+                    (I (cdr set1)))))))
+      (I set1))))
+
+(define intersectall
+  (lambda (lset)
+    (cond ((null? (cdr lset)) (car lset))
+          (else (intersect (car lset)
+                           (intersectall (cdr lset)))))
+   ))
+
+(define intersectall-rec
+  (lambda (lset)
+    (call-with-current-continuation
+     (lambda (hop)
+       (letrec ((A (lambda (lset)
+                  (cond
+                   ((null? (cdr lset)) (car lset))
+                   (else (I (car lset)
+                                     (A (cdr lset)))))))
+                (I (lambda (set1 set2)
+                     (letrec ((J (lambda (set1)
+                                   (cond
+                                    ((null? set1) '())
+                                    ((member? (car set1) set2)
+                                     (J (cdr set1)))
+                                    (else (cons (car set1)
+                                                (J (cdr (set1)))))))))
+                       (cond
+                        ((null? set2) '())
+                        (else (J set1)))))))
+      (cond ((null? lset) (hop '()))
+            (else (A lset)))))))) 
+
+(define length
+  (let ((h (lambda (l) 0)))
+    (set! h ())))
+
+(define Y-bang
+  (lambda (f)
+    (let ((h (lambda (l) (write 'hello))))
+      (set! h
+            (f (lambda (arg) (h arg)))) ;;There must be a evaluating thrick.
+      h)))
+
+(define L
+  (lambda (length)
+    (lambda (l)
+      (cond ((null? l) 0)
+            (else (+ 1
+                     (length (cdr l))))))))
+
+((Y-bang L) '(1 2 3))
+
+
+(define Y
+  (lambda (le)
+    ((lambda (f)
+       (f f))
+     (lambda (f)
+       (le (lambda (x) ((f f) x)))))))
+
+(define factorial
+  (lambda (n)
+    (if (= n 0)
+        1
+        (* n (factorial (- n 1))))))
+
+(define Y
+  (lambda (f)
+    (f (Y f))))
+
+(define a-factorial
+  (lambda (f)
+    (lambda (n)
+      (if (= n 0)
+          1
+          (* n (f (- n 1)))))))
+
+((Y a-factorial) 9)

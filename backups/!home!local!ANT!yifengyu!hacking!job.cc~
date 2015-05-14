@@ -1,0 +1,36 @@
+#include <iostream>
+#include <zthread/Runnable.h>
+#include <zthread/Thread.h>
+
+using namespace std;
+using namespace ZThread;
+
+class Counter: public Runnable
+{
+private:
+  int _id;
+  int _num;
+public:
+  Counter(int id):_id(id){};
+  void run(){
+    _num = 1;
+    while(_num <= 50){
+      cout << _id << " " << _num << endl;
+      _num++;
+    }
+  }
+  
+};
+
+
+int main(int argc, char *argv[])
+{
+  try{
+    Thread t(new Counter(1));
+  }
+  catch(Synchronization_Exception& e){
+    cerr << e.what() << endl;
+  }
+
+  return 0;
+}

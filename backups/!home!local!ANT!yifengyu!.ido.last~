@@ -1,0 +1,32 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/local/ANT/yifengyu/hacking/" . "js/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/local/ANT/yifengyu/"
+ "/home/local/ANT/yifengyu/hacking/js/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ ".emacs"
+ "getArray.rb"
+ "c.js"
+ "a.js"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/local/ANT/yifengyu/" (21463 23787 888486 209000) ".viminfo" ".#DropShip.2013-11-12-08.dropship-batch-rhel5-14002.dub4.amazon.com" "pending1.csv" ".speech-dispatcher/" "examples.desktop" ".Xauthority" ".ocamlinit" ".dbus/" ".local/" ".lesshst" "settings.jar" ".adobe/" ".emacs.d/" ".recentf" ".pki/" "Templates/" ".compiz-1/" ".gksu.lock" "filetarget" "Pictures/" ".profile" "avfeed/" ".ICEauthority" ".VirtualBox/" ".sunpinyin/" "quicklisp/" ".goutputstream-85BN3W" ".bash_logout" ".gstreamer-0.10/" ".gitconfig" "./" "hacking/" "opam_installer.sh" ".xsession-errors.old" ".dmrc" "#getArray.rb#" ".gconf/" "VirtualBox VMs/" "test.toolbox/" "message.txt" ".ido.last" ".goutputstream-ZNNN3W" ".mozilla/" "Desktop/" "MessageType.java" ".pulse-cookie" ".gvfs/" "shipment_write.txt~" "pending2.csv~" "Videos/" "Amazon.com Corporate Systems Certificate Authority.der" ".m2/" "Amazon Corporate Systems Certificate Authority G2 01.der" ".swt/" "data/" ".goutputstream-MWKZYW" "SQSPublisher.java" "xcode_6_beta.dmg" "IdeaProjects/" "toolbox/" ".slime/" ".sbclrc" "#DropShip.2013-11-12-08.dropship-batch-rhel5-14002.dub4.amazon.com#" "tools/" ".git-credential-cache/" "Amazon.com Infosec CA G2.der" ".xinput.d/" "getArray.rb" ".gnome/" ".bash_history" "smb.conf" ".gtk-bookmarks" "test.tla" ".subversion/" "av/" ".emacs~" ".pulse/" "../" "libpeerconnection.log" ".goutputstream-FQCPHX" "Music/" ".vdi/" "Amazon.com Internal Root Certificate Authority.der" "insert" ".zcompdump" "Amazon Corporate Systems Certificate Authority G2 02.der" "shipment.py" "Downloads.zip" "Public/" ".thumbnails/" ".#getArray.rb" "Untitled Folder/" ".goutputstream-SL1W2W" ".java/" ".gphoto/" ".cache/" "Downloads/" ".gnome2/" ".IntelliJIdea12/" "emacs.tar.gz" "tmp/" ".k5login" ".macromedia/" ".bashrc" "lib/" "DropShip.2013-11-12-08.dropship-batch-rhel5-14002.dub4.amazon.com" ".emacs" ".opam/" "Documents/" ".ssh/" ".fontconfig/" ".xsession-errors" "DropShip.2013-11-12-08.dropship-batch-rhel5-14012.dub4.amazon.com.gz" "pending2.csv" ".config/" ".goutputstream-63QR4W" "DropShip.2013-11-12-08.dropship-batch-rhel5-14002.dub4.amazon.com.gz" ".npm/")
+
+ ("/home/local/ANT/yifengyu/hacking/js/" (21463 23787 888486 209000) ".#c.js" "a.js" "./" "#c.js#" "#test.js#" "c.js" "../")
+
+ ("/home/local/ANT/yifengyu/hacking/" (21463 19195 800560 435000) "clang-3.2.src.tar.gz" "openjdk-7-fcs-src-b147-27_jun_2011.zip" "jdbc/" "job.cc" "./" "proto/" "ZThread-2.3.2.tar.gz" "ocaml-4.00.1.tar.gz" "job" "a.out" "llvm/" "picasso/" "lisp/" "erlang/" "ocaml-4.00.1/" "openjdk/" "../" "test.cc" "node-v0.10.29/" "js/" "node-v0.10.29.tar.gz" "#test.ml#" "clang-3.2.src/" "ZThread-2.3.2/")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

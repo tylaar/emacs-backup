@@ -1,0 +1,22 @@
+class Tree
+  attr_reader :value
+  def initialize(value)
+    @value = value
+    @children = []
+  end
+
+  def <<(value)
+    subtree = Tree.new(value)
+    @children << subtree
+    return subtree
+  end
+end
+
+t = Tree.new("root")
+child1 = t << "child 1"
+child1 << "gc 1.1"
+child1 << "gc 1.2"
+child2 = t << "child 2"
+child2 << "gc 2.1"
+child2 << "gc 2.2"
+

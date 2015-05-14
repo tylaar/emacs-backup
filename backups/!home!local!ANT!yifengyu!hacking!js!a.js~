@@ -1,0 +1,11 @@
+(function (){
+    var fizz, fizzBar, fizzBaz, fizzBuzzBarFoo;
+
+    fizzBuzzBarFoo = "CONSTANT";
+
+    foo = {
+        foobalizer: function(inductee) {
+            inductee = 
+        }
+    }
+})

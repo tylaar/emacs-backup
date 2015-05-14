@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(void)
+{
+  int a=3, b=4, c=5, d, e;
+  float x=1.2, y=2.4, z=-3.6;
+  long int u=51274, n=128765;
+  char c1='a', c2='b';
+  printf("a= %d  b= %d  c= %d\n", a, b, c);
+  printf("x=%.7f, y=%.7f, z=%.7f\n", x, y, z);
+  printf("x+y= %.2f  y+z=%.2f  z+x=%.2f\n", x+y, y+z, z+x);
+  printf("u= %d  n=   %d\n", u, n);
+  d=(int)c1;
+  e=(int)c2;
+  printf("c1=\'%c\' or %d(ASCII)\n", c1, d);
+  printf("c2=\'%c\' or %d(ASCII)\n", c2, e);
+  return 0;
+}

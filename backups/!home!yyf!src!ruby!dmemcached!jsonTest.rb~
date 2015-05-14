@@ -1,0 +1,10 @@
+require "json"
+
+str = '{"keyvalue":{"yyf:yyf","xjl:xjl"}}'
+
+parsed = JSON.parse(str)
+
+parsed["keyvalue"].each do |kv|
+    sp = kv.split(":")
+    puts "key: #{sp[0] and value : #{sp[1]}}"
+end

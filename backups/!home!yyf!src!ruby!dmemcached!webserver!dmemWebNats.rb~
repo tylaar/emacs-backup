@@ -1,0 +1,11 @@
+require "nats/client"
+require "zookeeper"
+
+class DMemWebNats
+    attr_reader :daoNatsNames
+    attr_writer :daoNatsNames
+    def initialize()
+        
+    end
+    
+end

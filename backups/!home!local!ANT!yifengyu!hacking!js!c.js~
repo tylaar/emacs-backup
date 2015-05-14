@@ -1,0 +1,9 @@
+(function () {
+    var fizz, fizzBar, fizzBaz, fizzBuzzBarFoo;
+
+    foo = {
+        foobalizer: function(inductee) {
+            inductee = fizz;
+        }
+    }
+})

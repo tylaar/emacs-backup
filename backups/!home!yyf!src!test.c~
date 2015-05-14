@@ -1,0 +1,7 @@
+#include <stdio.h>
+
+void quicksort(int a[], int length){
+}
+
+int main(int argc, char ** argv){
+}

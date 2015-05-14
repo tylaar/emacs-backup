@@ -1,0 +1,5 @@
+require "settingslogic"
+
+class Setting < Settingslogic
+    source "/home/yyf/src/ruby/dmemcached/config/app.yaml"
+end

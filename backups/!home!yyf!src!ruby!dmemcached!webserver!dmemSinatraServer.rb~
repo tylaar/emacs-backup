@@ -1,0 +1,18 @@
+require "sinatra"
+
+localIp = Setting.webServerIp
+localPort = Setting.webServerPort
+
+dmemWebServer = DMemWebServer.new
+
+set :port,localPort
+set :bind,localIp
+
+post '/eval' do
+    dmemWebServer.decoupleMessage params[:data]
+end
+
+not_found do
+    status 404
+    'not found, go through the manul again?'
+end    

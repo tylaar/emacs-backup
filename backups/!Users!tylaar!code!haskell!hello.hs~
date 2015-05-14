@@ -1,0 +1,19 @@
+addVec :: (Double,Double) -> (Double, Double) -> (Double, Double)
+addVec (x,y) (x1,y1) = (x + x1, y + y1)
+
+reverse' :: [a] -> [a]
+reverse' [] = []
+reverse' (x:xs) = reverse' xs ++ [x]
+
+qs :: (Ord a) => [a] -> [a]
+qs [] = []
+qs (x:xs) =
+    let smaller = [a | a <- xs, a <= x]
+        larger = [b | b <- xs, b > x]
+    in qs smaller ++ [x] ++ qs larger
+               
+                        
+                                   
+                       
+
+            

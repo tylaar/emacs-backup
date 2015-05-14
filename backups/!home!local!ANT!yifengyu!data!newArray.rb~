@@ -1,0 +1,12 @@
+#!/usr/bin/ruby
+
+##file = File.new(ARGV[1],"w");
+File.foreach(ARGV[0]) do |line|
+    lines = line.split(',');
+#    puts line;
+    for item in lines
+        print "+"+item;
+    end
+    puts
+    #file.puts newline[0..newline.length-2];
+end

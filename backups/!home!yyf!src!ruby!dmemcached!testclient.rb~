@@ -1,0 +1,7 @@
+require "json"
+require "restclient"
+
+h = Hash.new
+h["sender"] = "yyf"
+h["type"] = "get"
+h["content"] = ["1|2","3|4","5,6"]

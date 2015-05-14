@@ -1,0 +1,128 @@
+ls
+cd .emacs.d/
+ls
+cd elpa/
+ls
+cd auto-complete-1.4/
+ls
+cd dict/
+ls
+cd ..
+ls
+ls
+cd .emacs.d/
+ls
+cd mkdir clang-complete
+mkdir clang-complete
+cd clang-complete/
+unzip ~/Downloads/auto-complete-clang-master.zip 
+clang
+ls
+cd /
+ls
+cd lib/
+ls
+ls
+mkdir src
+ls
+ls
+cd src/
+ls
+gcc ./test.c
+ls
+cd src/
+ls
+cd python/
+ls
+python ./test.py 
+/usr/bin/python ./test.py 
+echo $PATH
+ls
+edit 
+ls
+cd src/
+ls
+cd c++
+ls
+make
+irb
+ls
+cd src/
+ls
+cd ruby/
+ls
+ls
+irb
+jobs
+history 
+ls
+cd src/
+ls
+cd ruby/
+lks
+cd nats-master/
+ls
+emacs ./Rakefile 
+edit
+edit ./README.md
+edit ./Rakefile 
+cd lib/
+ls
+cd bna
+cd nats/
+ls
+find-file server.rb 
+ls
+cd rub
+ls
+ls
+cd rub
+cd src/
+ls
+cd ruby/
+ls
+cd nats-master/
+ls
+cd lib/nats/server/
+ls
+find-file ./connection.rb
+find-file ./server.rb 
+ls
+cd ~
+ls
+mv ./ebs.el ~/.emacs.d/plugins/
+ls
+ls
+cd src/ruby/nats-master/lib/nats/
+ls
+find-file ./server.rb 
+irb
+cd ../../
+ls
+cd ..
+irb
+ls
+cd data
+ls
+pythono ./drawGraph.py 
+python ./drawGraph.py 
+python ./drawGraph.py 
+python ./drawGraph.py 
+python ./drawGraph.py 
+ls
+cd src/
+ls
+cd ruby/
+ls
+ruby ./Song.rb 
+ruby ./Song.rb 
+ruby ./Song.rb 
+ls
+cd src/
+ls
+cd ruby/
+ls
+mkdir em
+cd em/
+ls
+ruby ./emHttpServer.rb 

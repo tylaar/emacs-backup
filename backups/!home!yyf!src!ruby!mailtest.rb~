@@ -1,0 +1,10 @@
+require "net/pop"
+
+conn = Net::POP3.new('mail.foxmail.com')
+conn.start('andrew.y','200692249yyf')
+
+conn.mails.each do |msg|
+    File.open(msg.uidl, 'w') { |f| f.write msg.pop }
+end
+
+conn.finish
