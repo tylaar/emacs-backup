@@ -1,0 +1,221 @@
+(setenv "HOME" "/Users/tylaar")
+(setq debug-on-error t)
+(setq default-directory "~/")
+(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/clang-complete")
+(add-to-list 'load-path "~/.emacs.d/auto-complete-1.4")
+;;(set-default-font "monospace-12")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+
+ '(save-place t nil (saveplace)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+(defun set-frame-size-according-to-resolution ()
+  (interactive)
+  (if window-system
+  (progn
+    ;; use 120 char wide window for largeish displays
+    ;; and smaller 80 column windows for smaller displays
+    ;; pick whatever numbers make sense for you
+    (if (> (x-display-pixel-width) 1280)
+           (add-to-list 'default-frame-alist (cons 'width 200))
+           (add-to-list 'default-frame-alist (cons 'width 160)))
+    ;; for the height, subtract a couple hundred pixels
+    ;; from the screen height (for panels, menubars and
+    ;; whatnot), then divide by the height of a char to
+    ;; get the height we want
+    (add-to-list 'default-frame-alist 
+         (cons 'height (/ (- (x-display-pixel-height) 200)
+                             (frame-char-height)))))))
+
+(set-frame-size-according-to-resolution)
+
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-solarized-dark)
+
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+
+(add-to-list 'load-path "~/.emacs.d/anything-config")
+(require 'anything-config)
+
+
+(add-to-list 'load-path "~/.emacs.d/slime/")  ; your SLIME directory
+(setq inferior-lisp-program "/usr/bin/sbcl") ; your Lisp system(require 'slime)
+;;(slime-setup)
+
+;;(add-to-list 'load-path "~/.emacs.d/emacs-starter-kit")
+;;(require 'emacs-starter-kit)
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "https://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Add in your own as you wish:
+(defvar my-packages '(starter-kit starter-kit-lisp starter-kit-bindings auto-complete)
+  "A list of packages to ensure are installed at launch.")
+
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
+
+
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/elpa/auto-complete-1.4/dict/")
+(setq-default ac-sources (add-to-list 'ac-sources 'ac-source-directory))
+(global-auto-complete-mode t)
+(ac-config-default)
+
+
+;;(define-key ac-mode-map  [(control tab)] 'auto-complete)  
+
+
+;;Starting the emacs, what will happend?
+
+(global-set-key [f11] 'my-fullscreen)
+
+(setq default-tab-width 4)
+(setq-default indent-tabs-mode nil)
+
+(setq ruby-indent-level 4)
+
+;;(require 'framemove)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
+
+(require 'frame-cmds)
+
+
+(put 'kill-ring-save 'interactive-form
+     '(interactive
+       (if (use-region-p)
+           (list (region-beginning) (region-end))
+         (list (line-beginning-position) (line-beginning-position 2)))))
+
+(put 'kill-region 'interactive-form      
+     '(interactive
+       (if (use-region-p)
+           (list (region-beginning) (region-end))
+         (list (line-beginning-position) (line-beginning-position 2)))))
+
+(if (eq major-mode 'slime-repl-mode)
+    slime-repl-input-start-mark
+  (line-beginning-position))
+
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
+(autoload 'inf-ruby "inf-ruby" "Run an inferior Ruby process" t)
+(autoload 'inf-ruby-setup-keybindings "inf-ruby" "" t)
+
+(eval-after-load 'ruby-mode
+  '(add-hook 'ruby-mode-hook 'inf-ruby-setup-keybindings))
+
+(require 'multi-term)
+
+(add-to-list 'load-path
+             "~/.emacs.d/elpa/yasnippet-0.8.0")
+(require 'yasnippet) ;; not yasnippet-bundle
+;;(yas/initialize)
+(yas/load-directory "~/.emacs.d/elpa/yasnippet-0.8.0/snippets/text-mode")
+(yas/load-directory "~/.emacs.d/elpa/yasnippet-0.8.0/snippets/javascript-mode")
+(add-to-list 'ac-sources 'ac-source-yasnippet)
+(yas-global-mode 1)
+(add-hook 'javascript-mode-hook (lambda () (yas/minor-mode-on)))
+
+(define-key yas-minor-mode-map (kbd "<tab>") nil)
+(define-key yas-minor-mode-map (kbd "TAB") nil)
+(define-key yas-minor-mode-map [(control tab)] 'yas-expand)
+
+
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+(load "flymake-ruby-config.el" )
+
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/buffer-stack")
+(require 'buffer-stack)
+
+;; I use these key-bindings:
+
+;;
+(global-set-key [(f9)] 'buffer-stack-bury)
+(global-set-key [(control f9)] 'buffer-stack-bury-and-kill)
+(global-set-key [(control f10)] 'buffer-stack-up)
+(global-set-key [(control f11)] 'buffer-stack-down)
+(global-set-key [(control f7)] 'buffer-stack-track)
+(global-set-key [(control f8)] 'buffer-stack-untrack)
+
+
+;;(require 'speedbar)
+(require 'sr-speedbar)
+(add-hook 'after-init-hook '(lambda () (sr-speedbar-toggle)));;
+(setq sr-speedbar-width-x 20)
+(setq speedbar-use-images nil)
+
+
+(custom-set-variables
+     '(haskell-mode-hook '(turn-on-haskell-indent)))
+
+;; Starting to config the haskell mode for emacs
+(require 'haskell-mode)
+(custom-set-variables
+ '(haskell-process-suggest-remove-import-lines t)
+ '(haskell-process-auto-import-loaded-modules t)
+ '(haskell-process-log t))
+
+(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-or-reload)
+(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
+(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
+(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
+(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
+(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
+(define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
+(define-key haskell-mode-map (kbd "SPC") 'haskell-mode-contextual-space)
+;; End of the haskell configuration.
+
+(speedbar-add-supported-extension ".hs")
+(speedbar-add-supported-extension ".clj")
+
+
+(setq multi-term-program "/bin/bash")
+
+(add-to-list 'load-path "~/.emacs.d/lintnode")
+
+;;(Setq Lintnode-location "~/.emacs.d/lintnode")
+;;(setq lintnode-jslint-exclude (list 'nomen 'undef 'plusplus 'onevar 'white))
+(add-hook 'javascript-mode-hook
+          (lambda ()
+            (flymake-mode t)))
+
+(require 'js-comint)
+(setq inferior-js-program-command "node")
+(setq inferior-mode-hook
+      (lambda ()
+        (ansi-color-for-comint-mode-en)
+        (add-to-list 'comint-preoutput-filter-functions
+                     (lambda (output)
+                       (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
+                                                 (replace-regexp-in-string ".*1G.*3G" "&gt:" output
+                                                  ))))))
+
+(setq nrepl-hide-special-buffers t)
+(setq nrepl-log-messages t)
+(setq cider-repl-pop-to-buffer-on-connect nil)
+(add-hook 'cider-repl-mode-hook #'company-mode)
+(add-hook 'cider-mode-hook #'company-mode)
